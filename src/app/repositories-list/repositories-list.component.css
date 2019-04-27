@@ -1,0 +1,35 @@
+.container {
+  color: black;
+  margin-top: 100px;
+}
+
+.row {
+  margin: auto;
+
+}
+
+img {
+  width: 250px;
+  height: 250px;
+  margin: auto;
+  border-bottom: 3px solid black;
+  padding: 10px 0 10px 0;
+  margin-bottom: 10px;
+}
+
+.col-md-3 {
+  border: 1px solid black;
+}
+
+.title h4 {
+    color: blue;
+    text-align: left;
+    text-justify: auto;
+    font-size: 21px;
+}
+
+.title p{
+    color: black;
+    text-align: left;
+    
+}

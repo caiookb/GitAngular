@@ -1,0 +1,18 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-3" *ngFor="let rep of repositories">
+
+      <div class="row">
+        <img [src]="rep.owner.avatar_url">
+      </div>
+
+      <div class="title">
+        <h4>{{rep.name}}</h4>
+        <p>Linguagem: {{rep.language}}</p>
+        <p>Descrição: {{rep.description}}</p>
+        <p>{{rep.forks}}</p>
+        <p>{{rep.stargazers_count}}</p>
+      </div>
+    </div>
+  </div>
+</div>
