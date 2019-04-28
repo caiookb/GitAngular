@@ -1,14 +1,27 @@
-<div class="container-fluid">
-  <div class="row" *ngFor="let pull of repository">
-    <div class="col-md-3">
-      <img class="pullImage d-flex justify-content-center" [src]="pull.user.avatar_url">
-      <p class="d-flex justify-content-center">{{pull.user.login}}</p>
+<div class="container">
+    <img src="../../assets/back.png" (click)="goBack()" class="goBack"> 
+
+  <div class="row">
+
+    <div class="col" *ngFor="let pull of repository">
+      <a [href]="pull.html_url">
+        <div class="row">
+          <div class="col">
+            <p class="title">{{pull.title}}</p>
+            <div class="col-md-12">
+              <div class="row">
+                <img class="pullImage" [src]="pull.user.avatar_url">
+
+                <p class="name"><strong>{{pull.user.login}}</strong> comentou no dia {{pull.created_at | slice : 0:10}}
+                  às {{pull.created_at | slice : 11:19}} </p>
+              </div>
+              <p class="body">{{pull.body | slice: 0: 1250}}</p>
+            </div>
+          </div>
+        </div>
+      </a>
 
     </div>
-    <div class="col-md-9">
-      <p class="d-flex justify-content-center">{{pull.created_at}}</p>
-      <p class="d-flex justify-content-center">{{pull.title}}</p>
-      <p>{{pull.body}}</p>
-    </div>
   </div>
+
 </div>

@@ -1,32 +1,22 @@
 .container-fluid {
   color: black;
-  margin-top: 100px;
   max-width: 1280px;
   height: 100%;
+  margin-top: 50px;
 }
 
-.row {
-  margin: auto;
-}
-
-.search-results {
-  height: 90%;
-  overflow: scroll;
-}
-
-.row p {
-  text-align: center;
-  color: green;
+::-webkit-scrollbar {
+  display: none;
 }
 
 .repositories {
   width: 250px;
   height: 250px;
   margin: auto auto 10px auto;
-  border: 3px solid black;
-  box-shadow: 5px 10px #5e5c5c;
+  box-shadow: 2px 5px #5e5c5c;
   border-radius: 10px;
 }
+
 
 span {
   font-weight: bold;
@@ -36,14 +26,23 @@ span {
 .icon {
   width: 18px;
   height: 18px;
+  margin: 5px 10px;
 }
 
 .col-md-3 {
   padding-top: 20px;
+  overflow: scroll;
+  cursor: pointer;
 }
 
 .col-md-6 {
-  text-align: center;
+  max-width: 145px;
+  max-height: 30px;
+}
+
+.col-md-6 p{
+  font-size: 18px;
+  margin-top: 2px;
 }
 
 .title h4 {

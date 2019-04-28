@@ -14,6 +14,8 @@ export class PullRequestsComponent implements OnInit {
   @Input()
   repository;
 
+  
+
   constructor(private repositoriesService: RepositoriesService, private route: ActivatedRoute, private location: Location) { }
   
   ngOnInit() {
