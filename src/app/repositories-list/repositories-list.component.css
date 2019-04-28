@@ -1,35 +1,64 @@
-.container {
+.container-fluid {
   color: black;
   margin-top: 100px;
+  max-width: 1280px;
+  height: 100%;
 }
 
 .row {
   margin: auto;
-
 }
 
-img {
+.search-results {
+  height: 90%;
+  overflow: scroll;
+}
+
+.row p {
+  text-align: center;
+  color: green;
+}
+
+.repositories {
   width: 250px;
   height: 250px;
-  margin: auto;
-  border-bottom: 3px solid black;
-  padding: 10px 0 10px 0;
-  margin-bottom: 10px;
+  margin: auto auto 10px auto;
+  border: 3px solid black;
+  box-shadow: 5px 10px #5e5c5c;
+  border-radius: 10px;
+}
+
+span {
+  font-weight: bold;
+  font-style: italic;
+}
+
+.icon {
+  width: 18px;
+  height: 18px;
 }
 
 .col-md-3 {
-  border: 1px solid black;
+  padding-top: 20px;
+}
+
+.col-md-6 {
+  text-align: center;
 }
 
 .title h4 {
-    color: blue;
-    text-align: left;
-    text-justify: auto;
-    font-size: 21px;
+  color: blue;
+  text-align: left;
+  text-justify: auto;
+  font-size: 21px;
+  text-align: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-.title p{
-    color: black;
-    text-align: left;
-    
+.title p {
+  color: black;
+  text-align: left;
+  margin: 0px;
+  font-weight: 400;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }

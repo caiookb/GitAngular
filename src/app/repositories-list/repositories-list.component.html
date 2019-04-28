@@ -1,17 +1,32 @@
-<div class="container">
-  <div class="row">
-    <div class="col-md-3" *ngFor="let rep of repositories">
+<div class="container-fluid">
+  <div class="row" style="height: 90%" infiniteScroll [infiniteScrollDistance]="2" [infiniteScrollThrottle]="1000"
+    (scrolled)="onScroll()">
+
+    <div class="col-md-3" *ngFor="let rep of repositories" routerLink="/pullrequests/{{rep.owner.login}}/{{rep.name}}"> 
 
       <div class="row">
-        <img [src]="rep.owner.avatar_url">
+        <img class="repositories" [src]="rep.owner.avatar_url">
       </div>
 
-      <div class="title">
-        <h4>{{rep.name}}</h4>
-        <p>Linguagem: {{rep.language}}</p>
-        <p>Descrição: {{rep.description}}</p>
-        <p>{{rep.forks}}</p>
-        <p>{{rep.stargazers_count}}</p>
+      <div class="row">
+        <div class="col-md-6">
+          <img src="../../assets/star.png" class="icon">
+          <p> {{rep.stargazers_count}}</p>
+        </div>
+
+
+        <div class="col-md-6">
+          <img src="../../assets/fork.png" class="icon">
+          <p> {{rep.forks}}</p>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="title">
+          <h4>{{rep.name}}</h4>
+          <p><span>Linguagem:</span> {{rep.language}}</p>
+          <p><span>Descrição:</span> {{rep.description}}</p>
+        </div>
       </div>
     </div>
   </div>
